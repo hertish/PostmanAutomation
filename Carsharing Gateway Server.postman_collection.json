@@ -1,0 +1,268 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Carsharing Gateway Server",
+		"_postman_id": "958aeb64-ab4a-0323-6c7c-4b2246354711",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Booking postToken",
+			"request": {
+				"url": "https://carsharing-gateway.int.mmcb.io/tokens",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.carsharingtoken+json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.tokenrequest+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"7kQ8MG572&da\",\r\n  \"secret\": \"88b272c7adb6\",\r\n  \"username\": \"daimler.carsharing.booking\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Driver postToken",
+			"request": {
+				"url": "https://carsharing-gateway.int.mmcb.io/tokens",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.carsharingtoken+json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.tokenrequest+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"88!U754@Ub7N\",\r\n  \"secret\": \"88b272c7adb6\",\r\n  \"username\": \"daimler.carsharing.remotecmd\",\r\n  \"bookingId\":\"60E2A815173D45A3AAB2D80EA3CAD3D9\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "putBookings",
+			"request": {
+				"url": "http://localhost:5490/bookings",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 6ff7ad0a-151d-4660-ae2b-234c43d33977",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.bookingrequest+json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.bookingconfirmation+xml;charset=UTF-8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"endTime\": \"2017-07-07T16:00:16.000Z\",\r\n  \"startTime\": \"2017-07-07T15:00:16.000Z\",\r\n  \"userId\": \"Trial\",\r\n  \"vin\": \"W1RELESSCS0000001\"\r\n}"
+				},
+				"description": "Create a booking"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBookings",
+			"request": {
+				"url": "http://localhost:5490/bookings/F7AF7BCB075C441E9AC545A40DF7A6B0",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2a492293-8bcd-4db5-b9f6-22837616b0aa",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete a booking"
+			},
+			"response": []
+		},
+		{
+			"name": "getCarsharingSession",
+			"request": {
+				"url": "http://localhost:5490/bookings/63734A9D648E4DA9A341C07D4CE53B4B/carsharingsession",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 6ff7ad0a-151d-4660-ae2b-234c43d33977",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.carsharingsession+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"endTime\": \"2017-06-15T12:46:16.790Z\",\r\n  \"startTime\": \"2017-06-15T12:46:16.790Z\",\r\n  \"userId\": \"par.nilsson@consultant.volvo.com\",\r\n  \"vin\": \"321654987654\"\r\n}"
+				},
+				"description": "Get an existing booking"
+			},
+			"response": []
+		},
+		{
+			"name": "getBooking",
+			"request": {
+				"url": "http://localhost:5490/bookings/F7AF7BCB075C441E9AC545A40DF7A6B0/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2a492293-8bcd-4db5-b9f6-22837616b0aa",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.com.wirelesscar.carsharing.1_0.bookingconfirmation+xml;charset=UTF-8",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postLockDoors",
+			"request": {
+				"url": "http://localhost:5490/vehicles/W1RELESSCS0000001/commands/doors/lock",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 35030e1d-4a24-442f-9a7b-1e8d93c0524c",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postUnlockDoors",
+			"request": {
+				"url": "http://localhost:5490/vehicles/W1RELESSCS0000001/commands/doors/unlock",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer c6bc0376-3236-4cef-945b-1ce86f2d956a",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postVehicleImmobilize",
+			"request": {
+				"url": "http://localhost:5490/vehicles/W1RELESSCS0000001/commands/immobilize",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 35030e1d-4a24-442f-9a7b-1e8d93c0524c",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postVehicleMobilize",
+			"request": {
+				"url": "http://localhost:5490/vehicles/W1RELESSCS0000001/commands/mobilize",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 35030e1d-4a24-442f-9a7b-1e8d93c0524c",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postCarsharingSessionStart",
+			"request": {
+				"url": "http://localhost:5490/bookings/63734A9D648E4DA9A341C07D4CE53B4B/carsharingsession/start",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 6ff7ad0a-151d-4660-ae2b-234c43d33977",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
