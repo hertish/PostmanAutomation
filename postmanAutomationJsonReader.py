@@ -1,5 +1,4 @@
 import json
-from pprint import pprint
 
 class readPostManFile:
     def __init__(self,filePath):
