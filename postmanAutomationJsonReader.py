@@ -12,4 +12,4 @@ class readPostManFile:
         with open(self.filePath) as data_file:
             self.jsonData = json.load(data_file)
     def getNameOfPostmanCollection(self):
-        print self.jsonData["info"]["name"]
+        print "PostmanCollecationName:", self.jsonData["info"]["name"]
