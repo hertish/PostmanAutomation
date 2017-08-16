@@ -2,7 +2,6 @@ import json
 
 class readPostManFile:
     def __init__(self,filePath):
-        print 'in self'
         self.filePath = filePath
         self.jsonData = 0 
 
@@ -12,3 +11,13 @@ class readPostManFile:
             self.jsonData = json.load(data_file)
     def getNameOfPostmanCollection(self):
         print "PostmanCollecationName:", self.jsonData["info"]["name"]
+    def getNameOfEndPoints(self):
+        nameOfEndPointList = []
+        for item in self.jsonData["item"]:
+            nameOfEndPointList.append(item["name"])
+        print ""
+        print "Name of endpoints in the JsonFile:"
+        print "***********************************"
+        for item in nameOfEndPointList:
+            print item
+        print "***********************************"

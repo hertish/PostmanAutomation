@@ -22,3 +22,5 @@ ref_to_readPostmanFile = postmanAutomationJsonReader.readPostManFile(filePath)
 ref_to_readPostmanFile.readPostmanCollectionJsonFile()
 #Get name of postmanCollection
 ref_to_readPostmanFile.getNameOfPostmanCollection()
+#Get names of endpoints
+ref_to_readPostmanFile.getNameOfEndPoints()
