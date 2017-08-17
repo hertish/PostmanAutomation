@@ -24,3 +24,5 @@ ref_to_readPostmanFile.readPostmanCollectionJsonFile()
 ref_to_readPostmanFile.getNameOfPostmanCollection()
 #Get names of endpoints
 ref_to_readPostmanFile.getNameOfEndPoints()
+#Get names of endpoints requests url
+ref_to_readPostmanFile.getNameOfEndPointsRequestURL()

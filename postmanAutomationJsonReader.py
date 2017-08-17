@@ -21,3 +21,13 @@ class readPostManFile:
         for item in nameOfEndPointList:
             print item
         print "***********************************"
+    def getNameOfEndPointsRequestURL(self):
+        nameOfEndPointRequestURLList = []
+        for item in self.jsonData["item"]:
+            nameOfEndPointRequestURLList.append(item["request"]["url"])
+        print ""
+        print "Name of endpoint request URL in the JsonFile:"
+        print "***********************************"
+        for item in nameOfEndPointRequestURLList:
+            print item
+        print "***********************************"
