@@ -9,8 +9,10 @@ class readPostManFile:
         print 'Reading json file from:',self.filePath
         with open(self.filePath) as data_file:
             self.jsonData = json.load(data_file)
+
     def getNameOfPostmanCollection(self):
         print "PostmanCollecationName:", self.jsonData["info"]["name"]
+
     def getNameOfEndPoints(self):
         nameOfEndPointList = []
         for item in self.jsonData["item"]:
@@ -21,6 +23,7 @@ class readPostManFile:
         for item in nameOfEndPointList:
             print item
         print "***********************************"
+
     def getNameOfEndPointsRequestURL(self):
         nameOfEndPointRequestURLList = []
         for item in self.jsonData["item"]:
@@ -31,3 +34,23 @@ class readPostManFile:
         for item in nameOfEndPointRequestURLList:
             print item
         print "***********************************"
+
+    def getNameOfEndPointsRequestVerb(self):
+        nameOfEndPointRequestVerbList = []
+        for item in self.jsonData["item"]:
+            nameOfEndPointRequestVerbList.append(item["request"]["method"])
+        print ""
+        print "Name of endpoint request verb in the JsonFile:"
+        print "***********************************"
+        for item in nameOfEndPointRequestVerbList:
+            print item
+        print "***********************************"
+
+    def getNameAndValueOfEndPointRequestHeader(self):
+        print ""
+        print "Name and value of endpoint request header in the JsonFile:"
+        print "***********************************"
+        for item in self.jsonData["item"]:
+            print item["request"]["header"]
+        print "***********************************"
+
