@@ -50,7 +50,12 @@ class readPostManFile:
         print ""
         print "Name and value of endpoint request header in the JsonFile:"
         print "***********************************"
+        #for item in self.jsonData["item"][0]["request"]["header"]:
+	#    print item["key"]
+	 #   print item["value"]
+
         for item in self.jsonData["item"]:
-            print item["request"]["header"]
-        print "***********************************"
+	    for it in item["request"]["header"]:
+	 	print it["key"]
+		print it["value"]
 
