@@ -50,12 +50,19 @@ class readPostManFile:
         print ""
         print "Name and value of endpoint request header in the JsonFile:"
         print "***********************************"
-        #for item in self.jsonData["item"][0]["request"]["header"]:
-	#    print item["key"]
-	 #   print item["value"]
-
         for item in self.jsonData["item"]:
-	    for it in item["request"]["header"]:
-	 	print it["key"]
-		print it["value"]
+	    for items in item["request"]["header"]:
+	 	print items["key"]
+		print items["value"]
+            print "" 
 
+    def getBodyOfEndpointRequest(self):
+        print ""
+        print "The Body in the endpoint request from the JsonFile:"
+        print "***********************************"
+        for item in self.jsonData["item"]:
+            body = item["request"]["body"]
+            if len(body) > 0:
+                print body["mode"]   
+                print body["raw"]
+                print ""

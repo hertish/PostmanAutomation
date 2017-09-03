@@ -30,3 +30,6 @@ ref_to_readPostmanFile.getNameOfEndPointsRequestURL()
 ref_to_readPostmanFile.getNameOfEndPointsRequestVerb()
 #Get name and value of endpoints requests header 
 ref_to_readPostmanFile.getNameAndValueOfEndPointRequestHeader()
+#Get the body from the endpoints requests 
+ref_to_readPostmanFile.getBodyOfEndpointRequest()
+
