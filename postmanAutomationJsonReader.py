@@ -1,4 +1,5 @@
 import json
+import postmanAutomationLogger
 
 class readPostManFile:
     def __init__(self,filePath):
@@ -6,18 +7,20 @@ class readPostManFile:
         self.jsonData = 0 
 
     def readPostmanCollectionJsonFile(self):
-        print 'Reading json file from:',self.filePath
+        postmanAutomationLogger.postManAutomationLogging("info", "Reading json file from:", self.filePath)
         with open(self.filePath) as data_file:
             self.jsonData = json.load(data_file)
 
     def getNameOfPostmanCollection(self):
-        print "PostmanCollecationName:", self.jsonData["info"]["name"]
+        #print "PostmanCollecationName:", self.jsonData["info"]["name"]
+        postmanAutomationLogger.postManAutomationLogging("info","PostManCollectionName",self.jsonData["info"]["name"])
 
     def getNameOfEndPoints(self):
         nameOfEndPointList = []
         for item in self.jsonData["item"]:
             nameOfEndPointList.append(item["name"])
         print ""
+        postmanAutomationLogger.postManAutomationLogging("info","Name of endpoints in the JsonFile:")
         print "Name of endpoints in the JsonFile:"
         print "***********************************"
         for item in nameOfEndPointList:
@@ -66,3 +69,38 @@ class readPostManFile:
                 print body["mode"]   
                 print body["raw"]
                 print ""
+
+        print 'THE DICT'
+        #verb = "PUT"
+        #d =  {}
+        #d['name'] = "martin"
+        #d['url'] = "http:www.hotmail.com"
+        #d['raw'] = "vpn:mullvad.net"
+        #for i in d:
+        #    if i == 'raw':
+        #        print i, d[i]
+        endpointName = "getToken"
+        urlRequest = "www.aftonbladet.se"
+        verb = "GET"
+        header = "accetString"
+        body = "name=martin"
+        endpointName1 = "getBajs"
+        urlRequest1 = "www.gp.se"
+        verb1 = "POST"
+        header1 = "accetString"
+        body1 = "name=martina"
+        
+        jSonReaderDataList = []
+        jSonReaderDataList.append(dict(EndPointName=endpointName,UrlRequest=urlRequest,Verb='null',Header=header,Body=body))
+        jSonReaderDataList.append(dict(EndPointName=endpointName1,UrlRequest=urlRequest1,Verb='null',Header=header1,Body=body1))
+        for i, request in enumerate(jSonReaderDataList):
+            #print "hej"
+            #print i
+            #print requests
+            #plocka ut ur dicten:
+            print jSonReaderDataList[i]['EndPointName']
+            #insert in dicten
+            request['Verb'] = "pussssyyyy"
+            print '' 
+        print jSonReaderDataList
+

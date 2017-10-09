@@ -1,0 +1,51 @@
+2017-10-10 00:25:21,261 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:25:21,262 - root - INFO - Reading json file from: /Users/Dator/Google Drive/Python/PostmanAutomation/Carsharing Gateway Server.postman_collection.json 
+2017-10-10 00:25:21,262 - root - INFO - Reading json file from: /Users/Dator/Google Drive/Python/PostmanAutomation/Carsharing Gateway Server.postman_collection.json 
+2017-10-10 00:28:36,821 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:28:36,821 - root - INFO - Reading json file from: /Users/Dator/Google Drive/Python/PostmanAutomation/Carsharing Gateway Server.postman_collection.json 
+2017-10-10 00:28:36,821 - root - INFO - Reading json file from: /Users/Dator/Google Drive/Python/PostmanAutomation/Carsharing Gateway Server.postman_collection.json 
+2017-10-10 00:32:12,169 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:32:12,169 - root - INFO - Reading json file from:  
+2017-10-10 00:32:12,169 - root - INFO - Reading json file from:  
+2017-10-10 00:33:09,042 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:33:09,042 - root - INFO - Reading json file from:  
+2017-10-10 00:33:09,042 - root - INFO - Reading json file from:  
+2017-10-10 00:34:20,613 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:34:20,614 - root - INFO - Reading json file from:  
+2017-10-10 00:34:20,614 - root - INFO - Reading json file from:  
+2017-10-10 00:35:31,247 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:35:31,248 - root - INFO - Reading json file from:  
+2017-10-10 00:35:31,248 - root - INFO - Reading json file from:  
+2017-10-10 00:36:32,180 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:36:32,181 - root - INFO - Reading json file from:  
+2017-10-10 00:36:32,181 - root - INFO - Reading json file from:  
+2017-10-10 00:37:18,879 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:37:18,880 - root - INFO - Reading json file from:  
+2017-10-10 00:37:18,880 - root - INFO - Reading json file from:  
+2017-10-10 00:39:01,436 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:39:01,437 - root - INFO - Reading json file from:  
+2017-10-10 00:39:01,437 - root - INFO - Reading json file from:  
+2017-10-10 00:41:21,254 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:41:21,255 - root - INFO - Reading json file from:  
+2017-10-10 00:41:21,255 - root - INFO - Reading json file from:  
+2017-10-10 00:41:21,256 - root - INFO - PostManCollectionName  
+2017-10-10 00:41:21,256 - root - INFO - PostManCollectionName  
+2017-10-10 00:41:21,256 - root - INFO - PostManCollectionName  
+2017-10-10 00:42:52,020 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:42:52,020 - root - INFO - Reading json file from:  
+2017-10-10 00:42:52,020 - root - INFO - Reading json file from:  
+2017-10-10 00:42:52,021 - root - INFO - PostManCollectionName  
+2017-10-10 00:42:52,021 - root - INFO - PostManCollectionName  
+2017-10-10 00:42:52,021 - root - INFO - PostManCollectionName  
+2017-10-10 00:42:52,022 - root - INFO - Name of endpoints in the JsonFile:  
+2017-10-10 00:42:52,022 - root - INFO - Name of endpoints in the JsonFile:  
+2017-10-10 00:42:52,022 - root - INFO - Name of endpoints in the JsonFile:  
+2017-10-10 00:42:52,022 - root - INFO - Name of endpoints in the JsonFile:  
+2017-10-10 00:44:37,563 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:44:37,563 - root - INFO - Reading json file from:  
+2017-10-10 00:44:37,564 - root - INFO - PostManCollectionName  
+2017-10-10 00:44:37,565 - root - INFO - Name of endpoints in the JsonFile:  
+2017-10-10 00:46:37,272 - root - INFO - Starting postman automation in OS system: darwin 
+2017-10-10 00:46:37,272 - root - INFO - Reading json file from: /Users/Dator/Google Drive/Python/PostmanAutomation/Carsharing Gateway Server.postman_collection.json 
+2017-10-10 00:46:37,273 - root - INFO - PostManCollectionName Carsharing Gateway Server 
+2017-10-10 00:46:37,276 - root - INFO - Name of endpoints in the JsonFile:  

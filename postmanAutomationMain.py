@@ -1,6 +1,7 @@
 import postmanAutomationJsonReader
 import ConfigParser
 import sys
+import postmanAutomationLogger 
 
 #read operative system
 osSystem = sys.platform
@@ -13,7 +14,8 @@ if osSystem == "darwin":
 else:
     filePath = config.get('Variables and Paths', 'filePathWin') 
 
-print 'Starting postman automation in OS system ', osSystem
+postmanAutomationLogger.postManAutomationLogging("info","Starting postman automation in OS system:",osSystem)
+
 
 #Create an instance of readPostman class
 ref_to_readPostmanFile = postmanAutomationJsonReader.readPostManFile(filePath)
