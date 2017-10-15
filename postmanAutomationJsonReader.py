@@ -7,20 +7,19 @@ class readPostManFile:
         self.jsonData = 0 
 
     def readPostmanCollectionJsonFile(self):
-        postmanAutomationLogger.postManAutomationLogging("info", "Reading json file from:", self.filePath)
+        postmanAutomationLogger.PostManLogger("info", "Reading json file from:",self.filePath).postManAutomationLogging()
         with open(self.filePath) as data_file:
             self.jsonData = json.load(data_file)
 
     def getNameOfPostmanCollection(self):
-        #print "PostmanCollecationName:", self.jsonData["info"]["name"]
-        postmanAutomationLogger.postManAutomationLogging("info","PostManCollectionName",self.jsonData["info"]["name"])
+        postmanAutomationLogger.PostManLogger("info", "PostManCollectionName:",self.jsonData["info"]["name"]).postManAutomationLogging()
 
     def getNameOfEndPoints(self):
         nameOfEndPointList = []
         for item in self.jsonData["item"]:
             nameOfEndPointList.append(item["name"])
         print ""
-        postmanAutomationLogger.postManAutomationLogging("info","Name of endpoints in the JsonFile:")
+        postmanAutomationLogger.PostManLogger("info", "Name of endpoints in the JsonFile:").postManAutomationLogging()
         print "Name of endpoints in the JsonFile:"
         print "***********************************"
         for item in nameOfEndPointList:

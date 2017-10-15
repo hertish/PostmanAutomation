@@ -14,7 +14,8 @@ if osSystem == "darwin":
 else:
     filePath = config.get('Variables and Paths', 'filePathWin') 
 
-postmanAutomationLogger.postManAutomationLogging("info","Starting postman automation in OS system:",osSystem)
+#postmanAutomationLogger.postManAutomationLogging("info","Starting postman automation in OS system:",osSystem)
+postmanAutomationLogger.PostManLogger("info", "Starting postman automation in OS system:",osSystem).postManAutomationLogging()
 
 
 #Create an instance of readPostman class
