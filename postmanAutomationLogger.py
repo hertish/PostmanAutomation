@@ -22,7 +22,6 @@ fh = handlers.RotatingFileHandler('PostManLog.txt')
 fh.setFormatter(format)
 log.addHandler(fh)
 
-
 class PostManLogger:
     
     def __init__(self, loggLevel, loggText, param1='', param2=''):

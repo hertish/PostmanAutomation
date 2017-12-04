@@ -18,57 +18,51 @@ class readPostManFile:
         nameOfEndPointList = []
         for item in self.jsonData["item"]:
             nameOfEndPointList.append(item["name"])
-        print ""
         postmanAutomationLogger.PostManLogger("info", "Name of endpoints in the JsonFile:").postManAutomationLogging()
-        print "Name of endpoints in the JsonFile:"
-        print "***********************************"
+        postmanAutomationLogger.PostManLogger("info","******************************************************************").postManAutomationLogging()
         for item in nameOfEndPointList:
-            print item
-        print "***********************************"
+            postmanAutomationLogger.PostManLogger("info","EndPoint:",item).postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info", "******************************************************************").postManAutomationLogging()
 
     def getNameOfEndPointsRequestURL(self):
         nameOfEndPointRequestURLList = []
         for item in self.jsonData["item"]:
             nameOfEndPointRequestURLList.append(item["request"]["url"])
-        print ""
-        print "Name of endpoint request URL in the JsonFile:"
-        print "***********************************"
+        postmanAutomationLogger.PostManLogger("info","Name of endpoint request URL in the JsonFile:").postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info", "******************************************************************").postManAutomationLogging()
         for item in nameOfEndPointRequestURLList:
-            print item
-        print "***********************************"
+            postmanAutomationLogger.PostManLogger("info","Request URL:",item).postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info", "******************************************************************").postManAutomationLogging()
 
     def getNameOfEndPointsRequestVerb(self):
         nameOfEndPointRequestVerbList = []
         for item in self.jsonData["item"]:
             nameOfEndPointRequestVerbList.append(item["request"]["method"])
-        print ""
-        print "Name of endpoint request verb in the JsonFile:"
-        print "***********************************"
+        postmanAutomationLogger.PostManLogger("info","Name of endpoint request verb in the JsonFile:").postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info","******************************************************************").postManAutomationLogging()
         for item in nameOfEndPointRequestVerbList:
-            print item
-        print "***********************************"
+            postmanAutomationLogger.PostManLogger("info","Verb:",item).postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info","******************************************************************").postManAutomationLogging()
 
     def getNameAndValueOfEndPointRequestHeader(self):
-        print ""
-        print "Name and value of endpoint request header in the JsonFile:"
-        print "***********************************"
+        postmanAutomationLogger.PostManLogger("info","Name and value of endpoint request header in the JsonFile:").postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info","******************************************************************").postManAutomationLogging()
         for item in self.jsonData["item"]:
-	    for items in item["request"]["header"]:
-	 	print items["key"]
-		print items["value"]
-            print "" 
+            for items in item["request"]["header"]:
+                postmanAutomationLogger.PostManLogger("info","Key:",items["key"]).postManAutomationLogging()
+                postmanAutomationLogger.PostManLogger("info","Value:",items["value"]).postManAutomationLogging()
+                postmanAutomationLogger.PostManLogger("info","**************************").postManAutomationLogging()
 
     def getBodyOfEndpointRequest(self):
-        print ""
-        print "The Body in the endpoint request from the JsonFile:"
-        print "***********************************"
+        postmanAutomationLogger.PostManLogger("info","The body in the endpoint request from the JsonFile:").postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info","******************************************************************").postManAutomationLogging()
         for item in self.jsonData["item"]:
             body = item["request"]["body"]
             if len(body) > 0:
-                print body["mode"]   
-                print body["raw"]
-                print ""
-
+                postmanAutomationLogger.PostManLogger("info", "**************************").postManAutomationLogging()
+                postmanAutomationLogger.PostManLogger("info","mode:",body["mode"]).postManAutomationLogging()
+                postmanAutomationLogger.PostManLogger("info","raw:", body["raw"]).postManAutomationLogging()
+        postmanAutomationLogger.PostManLogger("info","******************************************************************").postManAutomationLogging()
         print 'THE DICT'
         #verb = "PUT"
         #d =  {}

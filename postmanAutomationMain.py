@@ -14,9 +14,7 @@ if osSystem == "darwin":
 else:
     filePath = config.get('Variables and Paths', 'filePathWin') 
 
-#postmanAutomationLogger.postManAutomationLogging("info","Starting postman automation in OS system:",osSystem)
 postmanAutomationLogger.PostManLogger("info", "Starting postman automation in OS system:",osSystem).postManAutomationLogging()
-
 
 #Create an instance of readPostman class
 ref_to_readPostmanFile = postmanAutomationJsonReader.readPostManFile(filePath)
@@ -35,4 +33,3 @@ ref_to_readPostmanFile.getNameOfEndPointsRequestVerb()
 ref_to_readPostmanFile.getNameAndValueOfEndPointRequestHeader()
 #Get the body from the endpoints requests 
 ref_to_readPostmanFile.getBodyOfEndpointRequest()
-
